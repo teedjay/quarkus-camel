@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+    minio:
+        build: .
+        ports:
+            - 9000:9000
+        environment:
+            - MINIO_ACCESS_KEY=access-key
+            - MINIO_SECRET_KEY=secret-key
+    postgres:
+        image: postgres:12
+        ports:
+            - 5432:5432
+        environment:
+            - POSTGRES_USER=admin
+            - POSTGRES_PASSWORD=ubersecret
+            - POSTGRES_DB=teedjay
+        volumes:
+            - ./create-database.sql:/docker-entrypoint-initdb.d/init.sql
