@@ -1,5 +1,22 @@
 # quarkus-camel
-Creating testable Camel routes with Quarkus
+Creating and testing Camel routes with Quarkus.
+
+Some components are from Quarkus Camel :
+- [x] file
+- [x] aws-s3
+- [x] http-platform
+- [x] timer
+- [x] direct
+- [x] seda
+- [x] log
+- [x] controlbus
+- [x] bean
+- [x] jdbc
+
+Additional components from regular Camel 3 :
+- [x] file-watch
+- [x] mock
+
 
 ## Pre-requisite
 You need a Java 11 and Maven 3.6.2 to run this.
@@ -10,6 +27,11 @@ docker-compose up -d
 ```
 
 Access Minio at : http://localhost:9000/minio/teedjay-bucket/
+
+## Start in Quarkus dev mode
+```
+mvn clean quarkus:dev
+```
 
 ## Metrics
 You get application metrics out of the box
