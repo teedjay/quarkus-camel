@@ -17,7 +17,7 @@ public class TimerRoute extends RouteBuilder {
         errorHandler(deadLetterChannel("log:error"));
 
         fromF("timer:foo?period=%s", period)
-            .setBody(() -> "Incremented the counter: " + System.currentTimeMillis())
+            .setBody(constant("Incremented the counter: " + System.currentTimeMillis()))
             .to("log:timer?showExchangePattern=false&showBodyType=false");
 
     }

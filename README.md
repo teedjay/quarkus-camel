@@ -4,7 +4,7 @@ Creating and testing Camel routes with Quarkus.
 Some components are from Quarkus Camel :
 - [x] file
 - [x] aws-s3
-- [x] http-platform
+- [x] http-platform (http://localhost:8080/camel/input)
 - [x] timer
 - [x] direct
 - [x] seda
