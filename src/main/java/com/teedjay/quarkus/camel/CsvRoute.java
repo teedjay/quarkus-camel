@@ -23,17 +23,17 @@ public class CsvRoute extends RouteBuilder {
 
         from("direct:inputcsv")
             .unmarshal(csvDataFormat)
-            .bean(this, "magic")
+            .bean(this, "convertFormat")
             .marshal(csvDataFormat)
             .to(destination);
 
     }
 
-    List<List<String>> magic(List<List<String>> csv) {
-        return csv.stream().map(this::convert).collect(Collectors.toList());
+    List<List<String>> convertFormat(List<List<String>> csv) {
+        return csv.stream().map(this::convertLine).collect(Collectors.toList());
     }
 
-    List<String> convert(List<String> line) {
+    List<String> convertLine(List<String> line) {
         return List.of(line.get(0), line.get(2), line.get(1));
     }
 
