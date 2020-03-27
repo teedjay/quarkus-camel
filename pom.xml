@@ -100,12 +100,15 @@
             <groupId>org.apache.camel.quarkus</groupId>
             <artifactId>camel-quarkus-platform-http</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>org.apache.camel</groupId>
-            <artifactId>camel-file-watch</artifactId>
-            <version>${camel-version}</version>
+            <groupId>org.apache.camel.quarkus</groupId>
+            <artifactId>camel-quarkus-file-watch</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.apache.camel.quarkus</groupId>
+            <artifactId>camel-quarkus-csv</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-mock</artifactId>
@@ -117,6 +120,7 @@
             <artifactId>quarkus-junit5</artifactId>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
