@@ -17,6 +17,10 @@ Additional components from regular Camel 3 :
 - [x] file-watch
 - [x] mock
 
+Other stuff that are tested :
+- [x] custom @QuarkusTestResource
+- [ ] inject TestContainers using @QuarkusTestResource
+
 
 ## Pre-requisite
 You need a Java 11 and Maven 3.6.2 to run this.
