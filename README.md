@@ -22,7 +22,7 @@ Other stuff that are tested :
 - [ ] inject TestContainers using @QuarkusTestResource
 
 
-## Pre-requisite
+## Pre-requisite 1 (S3 server and Postgres)
 You need a Java 11 and Maven 3.6.2 to run this.
 You need to start S3 server (Minio) and PostgreSQL database before running like this :
 ```
@@ -31,7 +31,7 @@ docker-compose up -d
 ```
 Access Minio at : http://localhost:9000/minio/teedjay-bucket/
 
-## Pre-requisite Postgres with Debezium
+## Pre-requisite 2 (Postgres with Debezium)
 You need to manually start and configure a separate Postgres 12 database
 for Debezium usage.  This database should have a test table with some
 data in it.
