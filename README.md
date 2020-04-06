@@ -36,7 +36,11 @@ You need to manually start and configure a separate Postgres 12 database
 for Debezium usage.  This database should have a test table with some
 data in it.
 
-Follow the commands below to start and cofigure.
+```
+docker start postgres-debezium
+```
+
+Follow the commands below to start and cofigure postgres-debezium the first time (only once).
 ```
 docker run --name postgres-debezium -p 5433:5432 -e POSTGRES_PASSWORD=postgres -d postgres:12
 
